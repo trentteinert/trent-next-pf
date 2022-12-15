@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import NavBar from '../components/NavBar';
 import ContentNow2 from '../components/ContentNow2';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export default function Home() {
   const [bioText, bioTextChange] = useState(false);
