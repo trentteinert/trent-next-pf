@@ -13,8 +13,10 @@
     "@prisma/client": "^4.7.1",
     "framer-motion": "^7.6.19",
     "next": "latest",
+    "planetscale": "^2.1.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "tap": "^16.3.2"
   },
   "devDependencies": {
     "@types/node": "18.11.3",
