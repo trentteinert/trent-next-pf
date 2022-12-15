@@ -69,3 +69,48 @@ main {
   color: #ececec;
   background-color: #222;
 }
+.desktop-content {
+  display: block;
+}
+.mobile-content {
+  display: none;
+}
+.desktop-cv {
+  display: block;
+}
+.mobile-cv {
+  display: none;
+}
+@media (max-width: 1000px) {
+  .desktop-content {
+    display: none;
+  }
+  .mobile-content {
+    display: block;
+  }
+  .desktop-cv {
+    display: none;
+  }
+  .mobile-cv {
+    display: block;
+  }
+
+  .cv-text {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+  .cv-text h1 {
+    font-weight: 800;
+  }
+  .cv-text p {
+    font-size: 14px;
+  }
+  .cv-born {
+    width: 90%;
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+}
