@@ -663,7 +663,7 @@ const ContentNow2 = ({
           <Image
             className='absolute max-h-[85vh] w-fit cursor-pointer border select-none'
             onClick={plusSlide}
-            src={'/../public/static/img/' + imageList[slide].src}
+            src={'/public/static/img/' + imageList[slide].src}
             alt='/'
             width={1100}
             height={700}
