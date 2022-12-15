@@ -610,7 +610,7 @@ const MobileContent = ({
             src={'/static/img/' + each.src}
             alt='/'
             width={600}
-            height={600}
+            height={400}
           />
         </div>
       ))}
