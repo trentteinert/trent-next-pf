@@ -18,13 +18,11 @@ const ContentNow2 = ({
 }) => {
   let d = new Date();
   let n = d.getDate();
-  let start = imageList[n - 1];
 
   useEffect(() => {
     function incrementNum() {
-      changeSlide(() => start.id);
+      changeSlide(n);
     }
-
     incrementNum();
   }, []);
 

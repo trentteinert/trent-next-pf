@@ -1,4 +1,4 @@
-export const images = [
+export const imageList = [
   {
     src: 'img-1.jpg',
     title: '#1',
