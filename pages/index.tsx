@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>trenton teinert</title>
+        <title>trent teinert</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 

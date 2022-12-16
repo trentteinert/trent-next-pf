@@ -11,7 +11,7 @@ const cv = () => {
   return (
     <div>
       <Head>
-        <title>trenton teinert - cv</title>
+        <title>trent teinert - cv</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <NavBar bioText={bioText} bioTextChange={bioTextChange} />
