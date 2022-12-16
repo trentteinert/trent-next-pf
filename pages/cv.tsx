@@ -6,7 +6,7 @@ import Cv from '../components/Cv';
 import MobileCv from '../components/MobileCv';
 
 const cv = () => {
-  const [bioText, bioTextChange] = useState(true);
+  const [bioText, bioTextChange] = useState(false);
 
   return (
     <div>
