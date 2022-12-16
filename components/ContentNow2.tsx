@@ -9,8 +9,8 @@ const ContentNow2 = ({
   slide,
   changeSlide,
 }: {
-  bioText: boolean;
-  archive: boolean;
+  bioText: any;
+  archive: any;
   slide: number;
   changeSlide: Function;
 }) => {
@@ -668,7 +668,6 @@ const ContentNow2 = ({
             width={1100}
             height={700}
             quality={80}
-            priority={true}
           />
         </motion.div>
       </AnimatePresence>

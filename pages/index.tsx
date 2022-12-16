@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import NavBar from '../components/NavBar';
 import ContentNow2 from '../components/ContentNow2';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import MobileContent from '../components/MobileContent';
+import ScrollButton from '../components/ScrollButton';
 
 export default function Home() {
   const [bioText, bioTextChange] = useState(false);
@@ -16,12 +17,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <NavBar
-        archive={archive}
-        archiveChange={archiveChange}
-        bioText={bioText}
-        bioTextChange={bioTextChange}
-      />
+      <NavBar bioTextChange={bioTextChange} bioText={bioText} />
       <div className='desktop-content'>
         <ContentNow2
           bioText={bioText}
@@ -31,12 +27,8 @@ export default function Home() {
         />
       </div>
       <div className='mobile-content'>
-        <MobileContent
-          bioText={bioText}
-          archive={archive}
-          slide={slide}
-          changeSlide={changeSlide}
-        />
+        <ScrollButton />
+        <MobileContent bioText={bioText} />
       </div>
     </div>
   );

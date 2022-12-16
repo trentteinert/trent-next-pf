@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import BioText from './BioText';
 import Archive from './Archive';
 import Link from 'next/link';
@@ -7,27 +7,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 const NavBar = ({
   bioText,
   bioTextChange,
-  archive,
-  archiveChange,
 }: {
   bioText: any;
-  bioTextChange: Function;
-  archive: any;
-  archiveChange: Function;
+  bioTextChange: any;
 }) => {
-  const handleBio = () => {
-    bioTextChange(!bioText);
-    if (archive == true) {
-      archiveChange(!archive);
-    }
-  };
-  const handleArchive = () => {
-    archiveChange(!archive);
-    if (bioText == true) {
-      bioTextChange(!bioText);
-    }
-  };
-
   const variants = {
     hidden: {
       opacity: 0,
@@ -52,6 +35,9 @@ const NavBar = ({
     },
   };
 
+  const handleBio = () => {
+    bioTextChange(!bioText);
+  };
   return (
     <AnimatePresence>
       <motion.div
@@ -99,19 +85,6 @@ const NavBar = ({
               transition={{ type: 'ease-in-out' }}
             >
               <BioText />
-            </motion.div>
-          </AnimatePresence>
-          <AnimatePresence>
-            <motion.div
-              className={archive ? 'block' : 'hidden'}
-              key={archive}
-              variants={variants}
-              initial='hidden'
-              animate='enter'
-              exit='exit'
-              transition={{ type: 'ease-in-out' }}
-            >
-              <Archive />
             </motion.div>
           </AnimatePresence>
         </main>

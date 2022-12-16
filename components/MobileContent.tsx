@@ -1,19 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useEffect } from 'react';
 
-const MobileContent = ({
-  bioText,
-  archive,
-  slide,
-  changeSlide,
-}: {
-  bioText: any;
-  archive: any;
-  slide: number;
-  changeSlide: Function;
-}) => {
+const MobileContent = ({ bioText }: { bioText: any }) => {
   const imageList = [
     {
       src: 'img1.jpg',
@@ -572,29 +560,24 @@ const MobileContent = ({
     },
   ];
 
-  let d = new Date();
-  let n = d.getDate();
+  function shuffleImage(array: any) {
+    var m = array.length,
+      t,
+      i;
 
-  useEffect(() => {
-    function incrementNum() {
-      changeSlide(n);
+    // While there remain elements to shuffle…
+    while (m) {
+      // Pick a remaining element…
+      i = Math.floor(Math.random() * m--);
+
+      // And swap it with the current element.
+      t = array[m];
+      array[m] = array[i];
+      array[i] = t;
     }
-    incrementNum();
-  }, []);
 
-  const randomNum = (min: any, max: any, lastSlide: any) => {
-    let num = Math.floor(Math.random() * (max - min) + min);
-    if ((num = lastSlide)) {
-      let num = Math.floor(Math.random() * (max - min) + min);
-      return num;
-    } else {
-      return num;
-    }
-  };
-
-  const plusSlide = (slide: any) => {
-    changeSlide(randomNum(1, 111, slide));
-  };
+    return array;
+  }
 
   return (
     <div
@@ -604,16 +587,18 @@ const MobileContent = ({
           : 'transition-all duration-200 mt-[125px] w-[95%] mx-auto'
       }
     >
-      {imageList.map((each, index) => (
-        <div key={index} className='mb-[40px]' onClick={() => {}}>
-          <Image
-            src={'/static/img/' + each.src}
-            alt='/'
-            width={600}
-            height={400}
-          />
-        </div>
-      ))}
+      <div>
+        {shuffleImage(imageList).map((each: any, index: any) => (
+          <div key={index} className='mb-[40px]'>
+            <Image
+              src={'/static/img/' + each.src}
+              alt='/'
+              width={600}
+              height={400}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
