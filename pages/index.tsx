@@ -7,13 +7,12 @@ import ScrollButton from '../components/ScrollButton';
 
 export default function Home() {
   const [bioText, bioTextChange] = useState(false);
-  const [archive, archiveChange] = useState(false);
   const [slide, changeSlide] = useState(() => 0);
 
   return (
     <div>
       <Head>
-        <title>trent</title>
+        <title>trenton teinert</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 

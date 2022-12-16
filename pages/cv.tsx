@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { useState } from 'react';
 import NavBar from '../components/NavBar';
 import Cv from '../components/Cv';
@@ -9,6 +10,10 @@ const cv = () => {
 
   return (
     <div>
+      <Head>
+        <title>trenton teinert - cv</title>
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
       <NavBar bioText={bioText} bioTextChange={bioTextChange} />
       <div className='desktop-cv'>
         <Cv />
