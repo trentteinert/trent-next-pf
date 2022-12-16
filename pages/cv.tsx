@@ -6,7 +6,7 @@ import MobileCv from '../components/MobileCv';
 
 const cv = () => {
   const [bioText, bioTextChange] = useState(true);
-  const [archive, archiveChange] = useState(false);
+
   return (
     <div>
       <NavBar bioText={bioText} bioTextChange={bioTextChange} />
@@ -14,7 +14,7 @@ const cv = () => {
         <Cv />
       </div>
       <div className='mobile-cv'>
-        <MobileCv bioText={bioText} archive={archive} />
+        <MobileCv bioText={bioText} />
       </div>
     </div>
   );

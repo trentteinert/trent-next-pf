@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import BioText from './BioText';
-import Archive from './Archive';
+
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 

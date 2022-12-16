@@ -1,7 +1,6 @@
 import React from 'react';
-import { useState } from 'react';
 
-const Cv = ({ bioText, archive }: { bioText: any; archive: any }) => {
+const Cv = ({ bioText }: { bioText: any }) => {
   return (
     <div
       className={

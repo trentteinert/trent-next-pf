@@ -4,13 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect } from 'react';
 
 const ContentNow2 = ({
-  bioText,
-  archive,
   slide,
   changeSlide,
 }: {
-  bioText: any;
-  archive: any;
   slide: number;
   changeSlide: Function;
 }) => {
@@ -667,7 +663,6 @@ const ContentNow2 = ({
             alt='/'
             width={1100}
             height={700}
-            quality={80}
           />
         </motion.div>
       </AnimatePresence>
