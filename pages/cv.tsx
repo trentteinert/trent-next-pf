@@ -9,12 +9,7 @@ const cv = () => {
   const [archive, archiveChange] = useState(false);
   return (
     <div>
-      <NavBar
-        archive={archive}
-        archiveChange={archiveChange}
-        bioText={bioText}
-        bioTextChange={bioTextChange}
-      />
+      <NavBar bioText={bioText} bioTextChange={bioTextChange} />
       <div className='desktop-cv'>
         <Cv />
       </div>
